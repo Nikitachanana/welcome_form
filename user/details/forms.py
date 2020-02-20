@@ -6,7 +6,6 @@ class DetailsForm(forms.Form):
     dob = forms.CharField(label="DOB ", max_length=50, widget=forms.DateInput())
     username  = forms.CharField(label="Phone Number", max_length = 13, widget=forms.TextInput(),required=True)
     password = forms.CharField(label="Password", max_length=13, widget=forms.PasswordInput(),required=True)
-    photo = forms.ImageField(required=True)
     email = forms.EmailField(label="Email Address", max_length=50,
                              widget=forms.TextInput(),required=True)
     phone = forms.CharField(label="Phone Number", max_length=13,
@@ -14,6 +13,10 @@ class DetailsForm(forms.Form):
     skills = forms.CharField(label="Skills",widget=forms.TextInput())
     empStatus = forms.CharField(label="Employment Status", widget=forms.TextInput())
     joined = forms.CharField(label="Joined ", max_length=50, widget=forms.TextInput())
+    city = forms.CharField(label="City", widget=forms.TextInput())
+    country = forms.CharField(label="Country", widget=forms.TextInput())
+    bio = forms.CharField(label="Bio", widget=forms.Textarea())
+
 
 class CardForm(forms.Form):
     cardNumber = forms.CharField(label="Card Number",max_length=16, widget=forms.NumberInput(attrs={'placeholder': 'Card Number'}), required=True)
